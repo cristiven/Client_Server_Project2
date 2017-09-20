@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<html>
+<head>
+	<title>about</title>
+	<style>
+		body, html {
+		    height: 100%;
+		    margin: 0;
+		}
+
+		.caption {
+		  width: 500px; margin: 0px auto; padding: 20px; background: white; -moz-box-shadow: 0 0 20px black;-webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black;
+		}
+		p { font: 15px/2 Georgia, Serif; margin: 0 0 20px 0; text-indent: 0px; }
+
+
+		.bg {
+		    /* The image used */
+		    background-image: url("{% static 'img/u1.jpg' %}");
+
+		    /* Full height */
+		    height: 100%; 
+
+		    /* Center and scale the image nicely */
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		}
+
+		
+		
+	</style>
+</head>
+<body>
+	<!--<div class="bg"></div>-->
+	    <div class="bg">
+	    	<br><br>
+	    	<div class="caption">
+	    	<h2><strong> Concafer </strong></h2>
+		   
+		   	<p style="text-align: justify;">Es un emprendiemto que se enfoca en dignificar el trabajo de los recolectores de café,  de tal forma que se vean beneficiados los dueños de la fincas como los recolectores de café, para así también mejorar la calidad de vida de sus familias.
+		   	</p>
+		   	<p style="text-align: justify;">La propuesta de valor para el emprendimiento se basa en apalancar la tecnología para  ofertar empleo y contratar a las personas del campo, que requieren los dueños de las fincas asociados a la cooperativas cafeteras. Los 3 factores fundamentales, de la propuesta de valor son:
+		   	</p>
+		   	
+		   	<p style="text-align: justify;">
+		  	<strong> Facilidad y agilidad de contratación: </strong> Escoger a las personas idóneas para realizar las labores que los asociados a las cooperativas cafeteras necesite.
+		  	</p>
+		   	
+		   	<p style="text-align: justify;">
+		   	<strong> Económico: </strong>Garantizar el aumento de los asociados a la cooperativa gracias a al servicio de contratación y brindar  un precio justo a las personas cafeteras por su labor realizada.
+		   	</p> 
+		   	
+		   	<p style="text-align: justify;">
+		   	<strong> Social: </strong>Mejorar la calidad de vida de las personas cafeteras en cuestiones de salud, pensión y servicios crediticios educativos. Tal  como el  Artículo 25 de la CC. El trabajo es un derecho y una obligación social y goza, en todas sus modalidades, de la especial protección del Estado. Toda persona tiene derecho a un trabajo en condiciones dignas y justas. 
+		   	</p>	
+	    	</div>
+	    	
+	    </div>
+           	
+</body>
+</html>
+{% endblock %}
+			

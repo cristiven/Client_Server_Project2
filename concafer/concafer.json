@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "eminent-ember-179004",
+  "private_key_id": "687e531c47139f30ec2dfc09a60118b7181b41ca",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCYw9sMgoWd8voi\nRPW1Seg8puvvOcS3RNdQuHK1lRLTPXAQ076KcrlQ/M45Fro1wMYODxp81DR77ZAN\nJoVQEQOUOVLTKziEo8M+VMH8x5PetFWBkkvOE5HcNDEa3PiBC4EnADCCFwi3bex9\nwtlQbmEjP9Tpy/46mOHvgVqkkDb/PO4ks0aJtn8VAtlqOHYc7IdssrrHI3MMxzmy\nGyb5Qmp0aBwUdDd5cnwkxKBHYExE/+uEDc6rTupXOIjLluFCmIu2TaUjYt0mrNxM\nKvguoRGbf7VXkJ/QurnG6EixKjmTr1t5Ek+vrfU8u93yP4M29MjlgzgCz+maMmeF\nwdCoMADfAgMBAAECggEACtwpj1scCp2CYLtMSGYHp4AqV6hgrrKrJ+bk6Lm/S9sb\nQ2b6Lbd4KyS9uFtAQ5//tHIobOVdEc5Spkytv4JmIbxtgeuZqfxGXgEChWjevz9M\nsNhooS7M+L2RHBrHY80gklg2GplumjOrU0ltz4T5TNs11KUW3q2Nqkwk2HwUHNLo\n2mY2ztS67U3T6z8bSJ7vur9Fu6tvzx8AoHgSsW3uVvbCMoqKINzGKeTS2peGg0N7\nycUkD7G1wASRrQ7X1VIuM4pvXKia36x+JYIqB/wv5rRZuCT5/gVIY8M5WjaF3cRH\nwZHukHsYmMtU5nQjJgtpc7ecCILNAtWCEiMBcFqtAQKBgQDWFgGr8YRhDqH+Ldq3\nBzT3ptaVlkcwnQYdD2QjbIMaqIwOSrt5NvTWgXKFenGF3dwnFmmKLPRCsuDt9DU/\nkw6w//Ev7OKnEgKIvTILgXvx3JhFIMo6fNhnQVEgabgVZ0cwT8Mmx5+of0TxaC4/\nE9mkf74m7a4LVgrCJxjwn77ZXwKBgQC2rHGwS9ggcNMwkKd067mhX5pKuR7iaapg\nonTnOWmpT7pcux6+ZwlEWCdCcyC3afE2fDTl/jq0vAHLNy5fIqcOw0s1sEQf3dzV\nO/wU8dE5veazYzBv0qH01YFWPv2l/4/P2NQR+ID4gwEiLgdJnzORBX+gfRoXip+2\nF+IZRLaIgQKBgAedUsPl3DqDhbl/sgbOh9DDK2C4rqGJBD2mXX5xDpy1H/4mJFLk\nZIL4qbUbrMwBHyJ4xpo2jR2ONTfhdr9jIKOlBtQYjds5ZcOtTwlfuqPYn8Xdq7O2\n2w+ZICSR/g0s1jheredENGaO2Enp1bNCpnwWWxIRZB5dGhbbwyRT2jrrAoGBALCO\nLzvDslp4ccYoqZEaHEpaSpgaID2Y/zFzEyZAmV0pT+g8etRwZcaGpTtWZrKfVKHi\nnoYEl90DMYCmDs2ogmqEWvbDLLTYDI6T8WqU5jG213leTvxlSl+G1AD11NZSET9E\nRIQx+QU4KSpN7oE7u+1YsSf+ge9q7j5jCwZ9IScBAoGBAJ5N+cOvBCCmVkkxIKn2\nrKYPgjoIj+lNwYzmXivAEadendZpbeffZH2brAHdz1Tm3j175TD+6VjzWQRxrX9y\nWkThZ0fLrbPv1T5VXCzEjxnCFQMnOBDEIPW3UHwRJt5+rw0xYSUCp9vlmlohKEuo\n0EuyeEzAmeONVF6Ujyb//Vip\n-----END PRIVATE KEY-----\n",
+  "client_email": "concafer-storage@eminent-ember-179004.iam.gserviceaccount.com",
+  "client_id": "100486623033624730814",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/concafer-storage%40eminent-ember-179004.iam.gserviceaccount.com"
+}

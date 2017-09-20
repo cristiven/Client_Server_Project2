@@ -1,0 +1,27 @@
+Base de dato únicamente para el Login
+
+Recolector
+ *Nombre (CharField)
+ *ID (Integer)
+ *Contraseña (CharField)
+
+Propietario
+ *Nombre (CharField)
+ *ID (Integer)
+ *Nombre de la finca (CharField)
+ *Contraseña (CharField)
+
+Administrador Cooperativa
+ *ID (NIT) (Integer)
+ *Nombre (CharField)
+ *Contraseña (CharField)
+
+Superusuario
+ *ID (Integer)
+ *Nombre (CharField)
+ *Contraseña (CharField)
+
+Supernumerario Cooperativa
+ *Nombre (CharField)
+ *ID (Integer)
+ *Contraseña (CharField)

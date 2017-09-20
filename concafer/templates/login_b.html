@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{% block content %}
+<div class=row>
+  <div class= 'col-sm-3 col-sm-offset-4'>
+    <h2> Inicio de Sección </h2>
+    <form method="POST">{% csrf_token %}
+    {{ login_super_user|crispy }}
+    <input class='btn btn-primary' type="submit" value="Iniciar Sección" style="width: 360px; height: 40px"><br>
+    <br>
+    <p><strong> Iniciar con: </strong></p>
+    <a href="{% url 'social:begin' 'facebook' %}"><img src="{% static 'img/fb.jpg' %}"/></a>
+    <a href="{% url 'social:begin' 'google-oauth2' %}">  <img src="{% static 'img/g.jpg' %}"/></a>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
+

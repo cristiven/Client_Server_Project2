@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  {% if not user.is_authenticated %}
+  	<h2>Hasta pronto...</h2>
+  	<br><br>
+    <a href="/">Iniciar Sección</a>
+  {% else %}
+    <h2>Autentificación exitosa</h2>
+    <br>
+    <p>Subir archivo con Google Drive</p>
+    <a href="/gd/"><img src="{% static 'img/gd1.jpg' %}"/></a>
+	<br><br>
+  {%endif%}	
+</div>
+{% endblock %}
+

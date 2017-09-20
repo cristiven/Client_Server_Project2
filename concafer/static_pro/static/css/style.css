@@ -1,0 +1,33 @@
+/* Style all font awesome icons */
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.fa:hover {
+    opacity: 0.9;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Google */
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+
+.fa-google:hover {
+  color: #e5230b;*/
+  /*color: #fff;*/
+}

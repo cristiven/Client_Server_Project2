@@ -1,0 +1,32 @@
+Base de dato únicamente para el Login
+
+Recolector
+ *Nombre
+ *ID
+ *Contraseña
+ Teléfono
+ Dirección
+ Tiempo de Experiencia
+ Eficiencia (Recolecta por día)
+ Género
+
+Propietario
+ *Nombre
+ *ID
+ *Nombre de la finca
+ *Contraseña
+ Dirección
+ Teléfono
+ Género
+ Cantidad de personas
+ Salario por horas
+ Área de la finca
+ Ubicación
+
+Cooperativa (Administradores)
+ *ID (NIT)
+ *Nombre
+ *Contraseña
+ Rol
+ Teléfono
+ Dirección
