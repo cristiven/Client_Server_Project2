@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'social_django',
     'crispy_forms',
     'registration', 
+    'channels',
     'sgc',
     #'gdstorage',
 ]
@@ -135,6 +136,19 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+#capa de canal
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "asgi_redis.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [os.environ.get('REDIS_URL', 'redis://localhost:8000')],
+        },
+        "ROUTING": "chat.routing.channel_routing",
+    },
+}
 
 
 # Static files (CSS, JavaScript, Images)
