@@ -34,6 +34,7 @@ urlpatterns = [
     url(r'^about/$', about, name='about'),
     # Para utilizar todas las vistas de django-registration-redux
     url(r'^accounts/', include('registration.backends.default.urls')),
+    url(r'^chat/$', core_views.chat_room, name='chat_room'),
 ]
 
 # se coloca para asegurar que los urls estan en desarrollo
