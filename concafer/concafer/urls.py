@@ -35,13 +35,16 @@ urlpatterns = [
     url(r'^about/$', about, name='about'),
     # Para utilizar todas las vistas de django-registration-redux
     url(r'^accounts/', include('registration.backends.default.urls')),
-    url(r'^chat/$', views.chat_room, name='chat'),
+    #url(r'^chat/$', views.chat_room, name='chat'),
+    url(r'^chat/$',  views.about, name='chat'),
     url(r'^new/$', views.new_room, name='new_room'),
     url(r'^(?P<label>[\w-]{,50})/$', views.chat_room, name='chat_room'),
 ]
 
 # se coloca para asegurar que los urls estan en desarrollo
 
+'''
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+'''

@@ -18,3 +18,4 @@ class ViewTests(TestCase):
         r = self.client.get('/room1/')
         self.assertTemplateUsed(r, 'chat/room.html')
         assert r.context['room'] == room
+

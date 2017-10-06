@@ -1,5 +1,6 @@
 from channels.staticfiles import StaticFilesConsumer
-from . import consumers
+from chat import consumers
+from channels.routing import route
 
 channel_routing = {
     # This makes Django serve static files from settings.STATIC_URL, similar

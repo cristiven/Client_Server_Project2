@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import random
+import string
+    
+
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -88,6 +93,7 @@ TEMPLATES = [
                 'social_django.context_processors.backends',
                 'social_django.context_processors.login_redirect',
             ],
+            'debug':DEBUG,
         },
     },
 ]
@@ -203,3 +209,26 @@ ACCOUNT_ACTIVATION_DAYS  =  7  # Ventana de activación de una semana; usted pue
 REGISTRATION_AUTO_LOGIN  =  True  # Registrar automáticamente el usuario en.
 SITE_ID = 1 # Para activar la aplicación de sites
 LOGIN_REDIRECT_URL = '/'
+
+# Logging
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'propagate': True,
+            'level': 'INFO'
+        },
+        'chat': {
+            'handlers': ['console'],
+            'propagate': False,
+            'level': 'DEBUG',
+        },
+    },
+}
