@@ -9,7 +9,7 @@ from .models import Room
 def about(request):
     return render(request, "chat/about.html")
 
-def new_room(request):
+def new_room(request): 
     """
     Randomly create a new room, and redirect to it.
     """
@@ -41,6 +41,7 @@ def chat_room(request, label):
     return render(request, "chat/room.html", {
         'room': room,
         'messages': messages,
+        'created' : created,
     })
 
 def admin_chat(request):
