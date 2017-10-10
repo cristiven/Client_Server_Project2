@@ -42,3 +42,13 @@ def chat_room(request, label):
         'room': room,
         'messages': messages,
     })
+
+def admin_chat(request):
+    """
+    La sala que muestra los tickets que se han creado
+    """
+
+    rooms = Room.objects.order_by('label')
+    return render(request, "chat/adminroom.html", {
+        'rooms' : rooms,
+    })

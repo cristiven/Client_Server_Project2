@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% load staticfiles %}
+  <!--<h1>{{ room.label }}</h1>-->
+  <br>
+  <div class="container">
+  <h1> Helpdesk Concafer</h1>
+  <p class="quiet">
+    Tickets: 
+  </p>
+  <table id="chat">
+      <tbody>
+        {% for room in rooms %}
+          <tr>
+            <td>{{ request.scheme }}://{{ request.get_host }}/{{ room.label }}</td>
+          </tr> 
+        {% endfor %}
+      </tbody>
+      <tfoot>
+      <tr>
+        <td>Di algo:</td>
+        <td colspan=2>
+          <input id="message" type="text" placeholder="Mensaje">
+          <button type="submit" id="go">Enviar</button>
+        </td> 
+      </tfoot>
+  </table>
+  <p>
+    <label for="handle">Tu nombre:</label>
+    <input id="handle" type="text" placeholder="Nombre">
+  </p>
+  </div>
+{% endblock content %}
+
+{% block afterbody %}
+  <script  src='{% static "js/jquery-1.12.1.min.js" %}'></script>
+  <script  src='{% static "js/reconnecting-websocket.min.js" %}'></script>
+  <script  src='{% static "js/chat.js" %}'></script>
+{% endblock afterbody %}

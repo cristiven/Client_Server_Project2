@@ -191,7 +191,7 @@ SOCIAL_AUTH_FACEBOOK_SECRET = '1bb917e4aed1d3024ea6e3b0f4f98d3a'
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-#configuración de los archivos estaticos
+#configuracion de los archivos estaticos
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static_pro", "static"),
     #'/var/www/static/',
@@ -205,9 +205,9 @@ STATIC_MEDIA = os.path.join(os.path.dirname(BASE_DIR), "static_env_concafer", "m
 
 
 
-ACCOUNT_ACTIVATION_DAYS  =  7  # Ventana de activación de una semana; usted puede, por supuesto, utilizar un valor diferente.
-REGISTRATION_AUTO_LOGIN  =  True  # Registrar automáticamente el usuario en.
-SITE_ID = 1 # Para activar la aplicación de sites
+ACCOUNT_ACTIVATION_DAYS  =  7  # Ventana de activacion de una semana; usted puede, por supuesto, utilizar un valor diferente.
+REGISTRATION_AUTO_LOGIN  =  True  # Registrar automaticamente el usuario en.
+SITE_ID = 1 # Para activar la aplicacion de sites
 LOGIN_REDIRECT_URL = '/'
 
 # Logging
