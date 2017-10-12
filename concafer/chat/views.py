@@ -5,6 +5,7 @@ from django.db import transaction
 from django.shortcuts import render, redirect
 import haikunator
 from .models import Room
+from django.http import HttpResponse
 
 def about(request):
     return render(request, "chat/about.html")
@@ -48,8 +49,13 @@ def admin_chat(request):
     """
     La sala que muestra los tickets que se han creado
     """
+    superusr = request.user.is_superuser
 
-    rooms = Room.objects.order_by('label')
-    return render(request, "chat/adminroom.html", {
-        'rooms' : rooms,
-    })
+
+    if (superusr):
+        rooms = Room.objects.order_by('label')
+        return render(request, "chat/adminroom.html", {
+            'rooms' : rooms,            
+        })
+    else:
+        return render(request, "chat/disable.html")
