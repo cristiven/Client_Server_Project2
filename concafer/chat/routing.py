@@ -3,12 +3,12 @@ from chat import consumers
 from channels.routing import route
 
 channel_routing = {
-    # This makes Django serve static files from settings.STATIC_URL, similar
-    # to django.views.static.serve. This isn't ideal (not exactly production
-    # quality) but it works for a minimal example.
+    # Esto hace que Django sirva archivos estáticos desde settings.STATIC_URL, similar
+	# a django.views.static.serve. Esto no es ideal (no exactamente la producción
+	# calidad) pero funciona para un ejemplo mínimo.
     'http.request': StaticFilesConsumer(),
 
-    # Wire up websocket channels to our consumers:
+    # Conecte los canales websocket a nuestros consumidores:
     'websocket.connect': consumers.ws_connect,
     'websocket.receive': consumers.ws_receive,
     'websocket.disconnect': consumers.ws_disconnect,

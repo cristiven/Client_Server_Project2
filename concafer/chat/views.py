@@ -10,9 +10,12 @@ from django.http import HttpResponse
 def about(request):
     return render(request, "chat/about.html")
 
+def chat(request):
+    return render(request, "chat/chat.html")
+
 def new_room(request): 
     """
-    Randomly create a new room, and redirect to it.
+    Cree aleatoriamente una nueva sala y redireccione a ella.
     """
     new_room = None
     
@@ -28,15 +31,15 @@ def new_room(request):
 
 def chat_room(request, label):
     """
-    Room view - show the room, with latest messages.
-    The template for this view has the WebSocket business to send and stream
-    messages, so see the template for where the magic happens.
+    Vista de la habitación: muestra la habitación con los últimos mensajes.
+    La plantilla para esta vista tiene el negocio de WebSocket para enviar y transmitir mensajes, 
+    así que vea la plantilla donde ocurre la magia.
     """
-    # If the room with the given label doesn't exist, automatically create it
-    # upon first visit (a la etherpad).
+    # Si la habitación con la etiqueta dada no existe, cree automáticamente
+    # a la primera visita (a la etherpad).
     room, created = Room.objects.get_or_create(label=label)
 
-    # We want to show the last 50 messages, ordered most-recent-last
+    # Queremos mostrar los últimos 50 mensajes, ordenados el más reciente-último
     messages = reversed(room.messages.order_by('-timestamp')[:50])
 
     return render(request, "chat/room.html", {
