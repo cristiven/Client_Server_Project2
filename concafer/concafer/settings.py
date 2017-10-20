@@ -118,7 +118,7 @@ DATABASES = {
         'NAME': 'concafer_admin_db',
         'USER': 'concafer_admin',
         'PASSWORD': 'admin123',
-        'HOST': 'localhost',                      
+        'HOST': 'concafer.herokuapp.com',                      
         'PORT': '',
     }
 
