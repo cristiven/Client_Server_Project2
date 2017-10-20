@@ -31,7 +31,7 @@ SECRET_KEY = 'n5e06jltg@_*hfoe+h2)9s50vbvhld@c!palr16p6byi4gsuqd'
 # si debug es True estamos en desarrollo de lo contrario estamos en produccion
 DEBUG = True
 
-ALLOWED_HOSTS = 'concafer.herokuapp.com'
+ALLOWED_HOSTS = ['concafer.herokuapp.com']
 
 
 #para envio de emails
