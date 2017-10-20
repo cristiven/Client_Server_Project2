@@ -1,0 +1,1 @@
+web: gunicorn concafer.wsgi --log-file -
