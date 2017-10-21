@@ -19,17 +19,20 @@ import string
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
- 
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'n5e06jltg@_*hfoe+h2)9s50vbvhld@c!palr16p6byi4gsuqd'
+
+#SECRET_KEY = 'n5e06jltg@_*hfoe+h2)9s50vbvhld@c!palr16p6byi4gsuqd'
+SECRET_KEY = os.environ.get("SECRET_KEY", "".join(random.choice(string.printable) for i in range(40)))
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # si debug es True estamos en desarrollo de lo contrario estamos en produccion
-DEBUG = True
+#DEBUG = True
+DEBUG = os.environ.get("DEBUG", False)
 
 ALLOWED_HOSTS = ['concafer.herokuapp.com']
 
