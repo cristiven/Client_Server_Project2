@@ -145,7 +145,7 @@ DATABASES = {
 '''
 
 DATABASES = {
-    'default': dj_database_url.config(default="postgres:///concafer", conn_max_age=500)
+    'default': dj_database_url.config(default="postgres:///concafer")
 }
 
 # Password validation
@@ -197,7 +197,7 @@ CHANNEL_LAYERS = {
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
+
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.facebook.FacebookOAuth2',
@@ -224,8 +224,13 @@ SOCIAL_AUTH_FACEBOOK_SECRET = '1bb917e4aed1d3024ea6e3b0f4f98d3a'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+#MEDIA_URL = '/media/'
+
+
+
+# Es en donde se van a enviar los archivos estaricos que viven en STATICFILES_DIRS
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_env_concafer", "static_root")
 STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
 
 #configuracion de los archivos estaticos
 STATICFILES_DIRS = [
@@ -233,11 +238,8 @@ STATICFILES_DIRS = [
     #'/var/www/static/',
 ]
 
-# Es en donde se van a enviar los archivos estaricos que viven en STATICFILES_DIRS
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_env_concafer", "static_root")
-
 # Son los archivos estaticos subidos por un tercero que son imagenes que son subidos por usuarios
-STATIC_MEDIA = os.path.join(os.path.dirname(BASE_DIR), "static_env_concafer", "media_root") 
+#STATIC_MEDIA = os.path.join(os.path.dirname(BASE_DIR), "static_env_concafer", "media_root") 
 
 
 
