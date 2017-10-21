@@ -32,7 +32,7 @@ SECRET_KEY = 'n5e06jltg@_*hfoe+h2)9s50vbvhld@c!palr16p6byi4gsuqd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # si debug es True estamos en desarrollo de lo contrario estamos en produccion
-DEBUG = False
+DEBUG = True
 #DEBUG = os.environ.get("DEBUG", False)
 
 ALLOWED_HOSTS = ['concafer.herokuapp.com']
