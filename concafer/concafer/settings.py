@@ -113,11 +113,11 @@ DATABASES = {
 }
 '''
 
-'''
+
 DATABASES = {
     'default':{
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'concafer_admin_db',
+        'NAME': 'postgresql-aerodynamic-75732',
         'USER': 'concafer_admin',
         'PASSWORD': 'admin123',
         'HOST': 'concafer.herokuapp.com',                      
@@ -125,14 +125,7 @@ DATABASES = {
     }
 
 }
-'''
 
-
-
-
-DATABASES = {
-    'default': dj_database_url.config(default="postgres://concafer_admin:admin123:@concafer.herokuapp.com:5432/postgresql-aerodynamic-75732", conn_max_age=500)
-}
 
 
 # Password validation
