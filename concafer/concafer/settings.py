@@ -42,7 +42,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "".join(random.choice(string.printable
 DEBUG = os.environ.get("DEBUG", False)
 
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ['*']
 
 
 #para envio de emails
