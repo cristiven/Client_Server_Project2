@@ -1,0 +1,26 @@
+{
+    "name": "Concafer End",
+    "description": "A real-time chat app, built as a simple example of using Django Channels ",
+    "repository": "https://github.com/cristiven/Client_Server_Project2",
+    "keywords": ["django", "channels", "websockets"],
+    "scripts": {
+        "postdeploy": "python manage.py migrate"
+    },
+    "env": {
+        "SECRET_KEY": {
+            "description": "Django's SECRET_KEY setting",
+            "generator": "secret"
+        }
+    },
+    "addons": ["heroku-postgresql", "heroku-redis"],
+    "formation": {
+        "web": {
+            "quantity": 1,
+          " size": "Free"
+        },
+        "worker": {
+            "quantity": 1,
+            "size": "Free"
+        }
+    }
+}

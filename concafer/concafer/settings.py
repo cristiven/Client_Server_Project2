@@ -19,23 +19,30 @@ import dj_database_url
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = 'n5e06jltg@_*hfoe+h2)9s50vbvhld@c!palr16p6byi4gsuqd'
+#SECRET_KEY = 'n5e06jltg@_*hfoe+h2)9s50vbvhld@c!palr16p6byi4gsuqd'
 #SECRET_KEY = os.environ.get("SECRET_KEY", "".join(random.choice(string.printable) for i in range(40)))
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # si debug es True estamos en desarrollo de lo contrario estamos en produccion
-DEBUG = False
+#DEBUG = True
 #DEBUG = os.environ.get("DEBUG", False)
 
-ALLOWED_HOSTS = ['concafer.herokuapp.com']
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+SECRET_KEY = os.environ.get("SECRET_KEY", "".join(random.choice(string.printable) for i in range(40)))
+DEBUG = os.environ.get("DEBUG", False)
+
+
+ALLOWED_HOSTS = [*]
 
 
 #para envio de emails
@@ -130,11 +137,16 @@ DATABASES = {
 
 }
 '''
+
+'''
 DATABASES = {
   'default': dj_database_url.config(default="postgres://concafer_admin:admin123@concafer.herokuapp.com:5432/postgresql-aerodynamic-75732", conn_max_age=500)
 }
+'''
 
-
+DATABASES = {
+    'default': dj_database_url.config(default="postgres:///concafer", conn_max_age=500)
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -234,3 +246,25 @@ REGISTRATION_AUTO_LOGIN  =  True  # Registrar automaticamente el usuario en.
 SITE_ID = 1 # Para activar la aplicacion de sites
 LOGIN_REDIRECT_URL = '/'
 
+# Logging
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'propagate': True,
+            'level': 'INFO'
+        },
+        'chat': {
+            'handlers': ['console'],
+            'propagate': False,
+            'level': 'DEBUG',
+        },
+    },
+}
