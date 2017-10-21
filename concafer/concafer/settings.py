@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 import random
 import string
+import dj_database_url
     
 
 
@@ -116,7 +117,7 @@ DATABASES = {
 }
 '''
 
-
+'''
 DATABASES = {
     'default':{
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -127,6 +128,10 @@ DATABASES = {
         'PORT': '5432',
     }
 
+}
+'''
+DATABASES = {
+  'default': dj_database_url.config(default="postgres://concafer_admin:admin123@concafer.herokuapp.com:5432/postgresql-aerodynamic-75732", conn_max_age=500)
 }
 
 
