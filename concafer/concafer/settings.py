@@ -109,7 +109,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'concafer.wsgi.application'
+#WSGI_APPLICATION = 'concafer.wsgi.application'
 
 
 # Database
@@ -179,6 +179,10 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 
 
 #capa de canal
