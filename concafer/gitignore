@@ -1,3 +1,8 @@
 *.sqlite3
-* .pd111
+*.pd111
 *pyc
+*.cache/
+*.coverage
+*.tox/
+htmlcov/
+static_env_concafer/

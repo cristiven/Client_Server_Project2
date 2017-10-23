@@ -46,7 +46,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 #DEBUG = os.environ.get("DEBUG", True)
 
 
-ALLOWED_HOSTS = ['safe-crag-12149.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 #para envio de emails
