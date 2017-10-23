@@ -158,7 +158,7 @@ DATABASES = {
  
 
 DATABASES = {
-    'default': dj_database_url.config(default="postgres:///concafer", conn_max_age=500)
+    'default': dj_database_url.config(default="postgres:///concafer")
 }
 
 
