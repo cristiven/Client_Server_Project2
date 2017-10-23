@@ -14,19 +14,19 @@ import os
 import random
 import string
 import dj_database_url
-    
+from decouple import config   
 
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-#SECRET_KEY = 'n5e06jltg@_*hfoe+h2)9s50vbvhld@c!palr16p6byi4gsuqd'
+#SECRET_KEY = 
 #SECRET_KEY = os.environ.get("SECRET_KEY", "".join(random.choice(string.printable) for i in range(40)))
 
 
@@ -35,14 +35,18 @@ import dj_database_url
 #DEBUG = True
 #DEBUG = os.environ.get("DEBUG", False)
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
-SECRET_KEY = os.environ.get("SECRET_KEY", "".join(random.choice(string.printable) for i in range(40)))
-DEBUG = os.environ.get("DEBUG", True)
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 
-ALLOWED_HOSTS = ['*']
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+#SECRET_KEY = os.environ.get("SECRET_KEY", "".join(random.choice(string.printable) for i in range(40)))
+#DEBUG = os.environ.get("DEBUG", True)
+
+
+ALLOWED_HOSTS = ['safe-crag-12149.herokuapp.com']
 
 
 #para envio de emails
@@ -114,6 +118,11 @@ WSGI_APPLICATION = 'concafer.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
+
+DATABASES = { 
+    'default': config('DATABASE_URL', default=default_dburl, cast=dburl), 
+}
 
 '''
 DATABASES = {
@@ -144,9 +153,12 @@ DATABASES = {
 }
 
 '''
+
+'''
 DATABASES = {
     'default': dj_database_url.config(default="postgres:///concafer")
 }
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

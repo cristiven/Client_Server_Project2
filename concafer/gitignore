@@ -1,6 +1,3 @@
-.cache/
-.coverage
-.tox/
-htmlcov/
-staticfiles/
-venv/
+*.sqlite3
+* .pd111
+*pyc
