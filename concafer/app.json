@@ -1,5 +1,5 @@
 {
-    "name": "Concafer End",
+    "name": "Concafer",
     "description": "A real-time chat app, built as a simple example of using Django Channels ",
     "repository": "https://github.com/cristiven/Client_Server_Project2",
     "keywords": ["django", "channels", "websockets"],
