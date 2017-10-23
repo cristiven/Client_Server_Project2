@@ -113,7 +113,7 @@ TEMPLATES = [
     },
 ]
 
-#WSGI_APPLICATION = 'concafer.wsgi.application'
+WSGI_APPLICATION = 'concafer.wsgi.application'
 
 
 # Database
