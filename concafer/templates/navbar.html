@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </button> 
+          </button>
           <a class="navbar-brand" href="/">Concafer</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -30,17 +30,15 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             {% if request.user.is_authenticated %}
-            <li><a> Bienvenido(a), {{user.username}}</a></li>
+              <li><a> Bienvenido(a), {{user.username}}</a></li>
               {% if request.user.is_superuser  %}
               <li><a href="/adminrooms">Helpdesk</a></li>
               {% endif %}
-            <li><a href="{% url 'auth_logout' %}">Salir </a></li>
-              
-            {% else %}
-            <li><a href="{% url 'registration_register' %}">Registrarse</a></li>
-            <li><a href="{% url 'auth_login' %}">Entrar </a></li>
+              <li><a href="{% url 'auth_logout' %}">Salir </a></li>
+              {% else %}
+              <li><a href="{% url 'registration_register' %}">Registrarse</a></li>
+              <li><a href="{% url 'auth_login' %}">Entrar </a></li>
             {% endif %}
-            
           </ul>
         </div><!--/.nav-collapse -->
       </div>

@@ -16,17 +16,15 @@
           <tr>
             <td>
 
-            <a href="{{ request.scheme }}://{{ request.get_host }}/{{ room.label }}">{{ request.scheme }}://{{ request.get_host }}/{{ room.label }}</a>
-            {{ room.active }}
-
+            <td><a href="{{ request.scheme }}://{{ request.get_host }}/{{ room.label }}">{{ request.scheme }}://{{ request.get_host }}/{{ room.label }}</a></td>
+          
             </td>
+          
           </tr> 
-          {% endif %}
-        {% endfor %}
+        {% endif %}
+      {% endfor %}
         <p>Administrar <a href="{% url 'admin:index' %}">Rooms</a>?</p>
       </tbody> 
-      
-
       <!--
       <tfoot>
       <tr>

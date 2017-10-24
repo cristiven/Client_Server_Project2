@@ -56,9 +56,9 @@ def admin_chat(request):
 
 
     if (superusr):
-        rooms = Room.objects.order_by('label')
-        return render(request, "chat/adminroom.html", {
-            'rooms' : rooms,            
-        })
+         rooms = Room.objects.order_by('label')
+         return render(request, "chat/adminroom.html", {
+             'rooms' : rooms,            
+         })
     else:
         return render(request, "chat/disable.html")
