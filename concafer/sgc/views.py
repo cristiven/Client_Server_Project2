@@ -2,8 +2,8 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout
-from .forms import LogForm 
-from .models import Recolector
+from .forms import LogForm, RegEmpleado 
+from .models import Recolector,Empleado
 
 
 #@login_required
@@ -35,6 +35,23 @@ def login(request):
 		"login_super_user": form,
 	}
 	return render(request, 'login_b.html', context)
+
+def empleado(request):
+	form = RegEmpleado()
+	form = RegEmpleado(request.POST or None)
+	if form.is_valid():
+		form_data = form.cleaned_data
+		nom = form_data.get("nombre")
+		ape = form_data.get("apellido")
+		cel = form_data.get("celular")
+		ciu = form_data.get("ciudad")
+		lab = form_data.get("labor")
+		obj = Empleado.objects.create(nombre=nom, apellido=ape, celular=cel, ciudad=ciu, labor=lab)
+	
+	context = {
+		"reg_empleado": form,
+	}
+	return render(request, 'empleo.html', context)
 	
 
 # vistas para el chat

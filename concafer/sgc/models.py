@@ -33,4 +33,12 @@ class SuperNumerario(models.Model):
     nombre = models.CharField(max_length=20)
     contrasena = models.CharField(max_length=20)
 
+class Empleado(models.Model):
+    nombre = models.CharField(max_length=20)
+    apellido = models.CharField(max_length=20)
+    celular = models.IntegerField()
+    cedula = models.IntegerField()
+    ciudad = models.CharField(max_length=20)
+    labor = models.CharField(max_length=20)
+
 

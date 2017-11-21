@@ -8,9 +8,6 @@ class Room(models.Model):
     label = models.SlugField(unique=True)
     active = models.BooleanField(default=True)
 
-    def __unicode__(self):
-        return self.label
-
 class Message(models.Model):
     room = models.ForeignKey(Room, related_name='messages')
     handle = models.TextField()

@@ -6,3 +6,11 @@ from django import forms
 class LogForm(forms.Form):
 	usuario = forms.CharField(max_length=20)
 	contraseña = forms.CharField(max_length=20)
+
+class RegEmpleado(forms.Form):
+	nombre = forms.CharField(max_length=20)
+	apellido = forms.CharField(max_length=20)
+	celular = forms.IntegerField()
+	cedula = forms.IntegerField()
+	ciudad = forms.CharField(max_length=20)
+	labor = forms.CharField(max_length=20)

@@ -32,14 +32,10 @@ def new_room(request):
 def chat_room(request, label):
     """
     Vista de la habitación: muestra la habitación con los últimos mensajes.
-    La plantilla para esta vista tiene el negocio de WebSocket para enviar y transmitir mensajes, 
-    así que vea la plantilla donde ocurre la magia.
     """
-    # Si la habitación con la etiqueta dada no existe, cree automáticamente
-    # a la primera visita (a la etherpad).
     room, created = Room.objects.get_or_create(label=label)
 
-    # Queremos mostrar los últimos 50 mensajes, ordenados el más reciente-último
+    # Mostrar los últimos 50 mensajes, ordenados el más reciente-último
     messages = reversed(room.messages.order_by('-timestamp')[:50])
 
     return render(request, "chat/room.html", {
@@ -53,7 +49,6 @@ def admin_chat(request):
     La sala que muestra los tickets que se han creado
     """
     superusr = request.user.is_superuser
-
 
     if (superusr):
          rooms = Room.objects.order_by('label')
