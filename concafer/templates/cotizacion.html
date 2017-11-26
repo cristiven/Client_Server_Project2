@@ -32,12 +32,12 @@
 
 <div class="jumbotron">
 <div class=row>
-  <h2 class="text-align-center"> ¿ Quieres tener un trabajo digno en el campo ? </h2>
-  <h5 class="text-align-center">Trabajo con contratación inmediata como trabajador del campo</h5>
+  <h2 class="text-align-center"> Despreocúpate, nosotros nos encargamos del peronal para tu finca</h2>
+  <h5 class="text-align-center"></h5>
   <br>
   <div class='col-sm-6'>
         <div class="container">
-        <iframe width="620" height="400" src='{% static "img/fom.jpg" %}' frameborder="0" allowfullscreen></iframe>
+        <iframe width="600" height="405" src='{% static "img/dfi.jpg" %}' frameborder="0" allowfullscreen></iframe>
         </div>
             
   </div>
@@ -47,11 +47,9 @@
          
     </div>
     <div class="col-sm-6 col-sm-offset-0">
-        <p>-  Una forma mas cómoda de encontrar trabajo, con nuestro sistema de oferta de empleo. </p>
-        <p>-  Cuentan con una contratación de calidad en cuanto a un precio justo y prestaciones sociales.</p>
-        <p>-  Capacitación en cuanto a su labor que realiza, para así mejorar sus competencias en el campo.</p>
-        <p>-  Trato digno y respetuoso.</p>
-
+        <p>- No tendras que preocuparse de conseguir personal para su finca, ya que mediante la Cooperativa podrán solicitar el tipo y la cantidad de personas que requieren para su finca. </p>
+        <p>- Podrás conseguir insumos que necesiten para su finca, y encontrar empresas que le puedan comercializar sus productos.</p>
+        <p>- Capacitación en productos agricola.</p>
     </div>
 </div>
 </div>
@@ -59,14 +57,16 @@
     <div class="cuadrado">
     <div class= 'col-sm-8 col-sm-offset-3'">
         <br>
-        <h5> Completa tus datos y una persona de nuestro equipo te llamará en menos de 48 horas </h5>
+        <h5 > Completa los datos, para contactarnos contigo lo más pronto posible. </h5>
     </div>
-  <div class= 'col-sm-3 col-sm-offset-5'>
+  <div class= 'col-sm-3 col-sm-offset-4'>
     <form method="POST">{% csrf_token %}
-    
-    {{ reg_empleado|crispy }}
+        
+    {{ reg_cotizacion|crispy }}
     <br>
-    <input class='btn btn-primary' type="submit" value="Enviar datos" style="width: 360px; height: 40px"><br>
+    <input class='btn btn-primary' type="submit" value="¡Cotiza ya!" style="width: 360px; height: 40px"/>
+    <br>
+    
     <br>
     </form>
   </div>

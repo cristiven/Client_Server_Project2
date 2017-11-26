@@ -2,6 +2,21 @@
 {% load i18n %}
 {% load crispy_forms_tags %}
 
+
+<style>
+{% block style %}
+
+.cuadrado-2 {
+     width: 1520px; 
+     height: 300px; 
+     border: 1px solid #555;
+     background: #394448;
+}
+   
+{% endblock %}
+</style>
+
+
 {% block content %}
 <div class = 'col-sm-6 col-sm-offset-3'>
 	<br>
@@ -14,4 +29,36 @@
   <br><br>
   <p class = 'text-align-center'>{% trans "Ya tienes una cuenta" %}? <a href="{% url 'auth_login' %}">{% trans "Iniciar Sesión" %}</a>!</p>
 </form>
+</div>
+
+<div class="container-fluit">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class = ''>
+		<div class="cuadrado-2">
+		    <div id="wrap">
+		    <!-- Begin page content -->
+		      <div class="container"
+		        <div class="page-header">
+		          <br>
+		          <h3 style="color: #fff";>Concafer Colombia Network</h3>
+		          <!--<p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</p>-->
+		          <p><a style="color: #fff"; href="http://www.coopcafer.com/">Coopcafer</a></p>
+		          <p><a style="color: #fff"; href="https://www.federaciondecafeteros.org/clientes/es/que_hacemos/cooperativas_de_caficultores/">Federacion de cafeteros</a></p>
+		      </div>
+		   
+		    </div>
+		          <div class='text-align-center'>
+		          <p><a style="color: #fff"; href="#">Políticas de uso</a> | <a style="color: #fff"; href="#">Protección de datos</a></p>
+		          </div>
+		      <div id="footer">
+		        <div class="container">
+		          <p class="text-muted credit">2017 Concafer Colombia </p> 
+		          <!--<p class="text-muted credit">Concafer<a href="http://martinbean.co.uk/">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>-->
+		        </div>
+		      </div> 
+		</div>
+	</div>
+</div>
+
 {% endblock %}
+

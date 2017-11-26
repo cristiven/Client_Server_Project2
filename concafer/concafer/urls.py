@@ -33,7 +33,8 @@ urlpatterns = [
     url(r'^logout/$', core_views.LogOut, name='LogOut'),
     url(r'^gd/$', core_views.gd, name='gd'),
     url(r'^about/$', about, name='about'),
-    url(r'^empleo/$', core_views.empleado, name='about'),
+    url(r'^empleo/$', core_views.empleado, name='empleo'),
+    url(r'^cotizacion/$', core_views.cotizacion, name='cotizacion'),
 
     # Para utilizar todas las vistas de django-registration-redux
     url(r'^accounts/', include('registration.backends.default.urls')),
