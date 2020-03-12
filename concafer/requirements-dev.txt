@@ -46,7 +46,7 @@ pew==1.1.0
 pipenv==8.2.7
 ply==3.10
 prompt-toolkit==1.0.15
-psutil==5.3.1
+psutil==5.6.6
 psycopg2==2.6.2
 pyasn1==0.3.3
 pyasn1-modules==0.1.1
